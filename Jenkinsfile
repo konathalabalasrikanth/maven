@@ -6,7 +6,7 @@ node('master')
    }
    stage('ContinuousBuilding')
    {
-       sh 'mvn package'
+       sh 'mvn clean package'
    }
    stage('ContinuousDeployment')
    {
