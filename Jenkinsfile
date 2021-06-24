@@ -6,11 +6,11 @@ node('master')
    }
    stage('ContinuousBuild')
    {
-       sh 'mvn clean'
+       sh 'mvn package'
    }
    stage('ContinuousDeployment')
    {
-       sh 'scp /root/.jenkins/workspace/ScriptedPipeline1/webapp/target/webapp.war ubuntu@10.0.2.116:/var/lib/tomcat8/webapps/testapp.war'
+       sh 'scp /root/.jenkins/workspace/pipe_line_pro/webapp/target/webapp.war ubuntu@10.0.2.116:/var/lib/tomcat8/webapps/testapp.war'
    }
    stage('ContinuousTesting')
    {
