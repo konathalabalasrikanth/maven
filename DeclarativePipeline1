@@ -38,7 +38,7 @@ pipeline
         {
            steps
            {
-               input message: 'Waiting for Approval from the DM!', submitter: 'naresh'
+               input message: 'Waiting for Approval from the Naresh!', submitter: 'naresh'
                #sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/DeclarativePipeline/webapp/target/webapp.war ubuntu@172.31.26.41:/var/lib/tomcat8/webapps/prodwebapp.war'
            }
         }
