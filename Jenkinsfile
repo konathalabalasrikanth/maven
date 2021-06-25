@@ -1,5 +1,6 @@
 node('master')
 {
+   properties([pipelineTriggers([pollSCM('* * * * *')])])
    stage('ContinuousDownload') 
    {
        git 'https://github.com/intelliqittrainings/maven.git'    
