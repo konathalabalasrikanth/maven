@@ -11,7 +11,7 @@ node('master')
    }
    stage('ContinuousDeployment')
    {
-       sh 'scp /root/.jenkins/workspace/Jenkins_pipeline/webapp/targetwebapp.war root@10.0.2.116:/var/lib/tomcat8/webapps/testapp.war'
+       sh 'scp /root/.jenkins/workspace/Jenkins_pipeline/webapp/target/webapp.war root@10.0.2.116:/var/lib/tomcat8/webapps/testapp.war'
    }
    stage('ContinuousTesting')
    {
